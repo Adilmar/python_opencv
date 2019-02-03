@@ -1,6 +1,6 @@
-# python_opencv
+# Python + OpenCV 
 
-- MInistrante: Adilmar Coelho Dantas (Doutorando em Ciência da Computação 
+- Ministrante: Adilmar Coelho Dantas (Doutorando em Ciência da Computação 
 - Universidade Federal de Uberlândia - MG
 
 # Ementa do Curso 
