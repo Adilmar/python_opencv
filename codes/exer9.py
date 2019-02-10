@@ -1,26 +1,25 @@
-import cv2
 import numpy as np
+import cv2 as cv
+from matplotlib import pyplot as plt
 
-cap = cv2.VideoCapture(1)
+img = cv.imread('images/01.jpg',0)
+#laplacian
+laplacian = cv.Laplacian(img,cv.CV_64F)
+#sobelx
+sobelx = cv.Sobel(img,cv.CV_64F,1,0,ksize=5)
+#sobely
+sobely = cv.Sobel(img,cv.CV_64F,0,1,ksize=5)
 
-while(1):
+plt.subplot(2,2,1),plt.imshow(img,cmap = 'gray')
+plt.title('Original'), plt.xticks([]), plt.yticks([])
 
-    _, frame = cap.read()
-    hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
-    
-    lower_red = np.array([30,150,50])
-    upper_red = np.array([255,255,180])
-    
-    mask = cv2.inRange(hsv, lower_red, upper_red)
-    res = cv2.bitwise_and(frame,frame, mask= mask)
+plt.subplot(2,2,2),plt.imshow(laplacian,cmap = 'gray')
+plt.title('Laplacian'), plt.xticks([]), plt.yticks([])
 
-    cv2.imshow('Original',frame)
-    edges = cv2.Canny(frame,100,200)
-    cv2.imshow('Edges',edges)
+plt.subplot(2,2,3),plt.imshow(sobelx,cmap = 'gray')
+plt.title('Sobel X'), plt.xticks([]), plt.yticks([])
 
-    k = cv2.waitKey(5) & 0xFF
-    if k == 27:
-        break
+plt.subplot(2,2,4),plt.imshow(sobely,cmap = 'gray')
+plt.title('Sobel Y'), plt.xticks([]), plt.yticks([])
 
-cv2.destroyAllWindows()
-cap.release()
+plt.show()
