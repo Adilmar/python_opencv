@@ -21,3 +21,4 @@
 - Correspondência de Modelos com OpenCV
 - Detecção de bordas e gradientes
 - Classificadores em cascata (HaarCascade) com OpenCv
+- Detecção de ROI's (face e olhos) usando Haar-Cascade
