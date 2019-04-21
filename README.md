@@ -1,5 +1,7 @@
 # Python + OpenCV 
 
+![alt text](https://raw.githubusercontent.com/Adilmar/python_opencv/master/codes/images/001.jpg)
+
 - Ministrante: Adilmar Coelho Dantas (Doutorando em Ciência da Computação) 
 - Universidade Federal de Uberlândia - MG
 - WebSite: www.adilmar.com.br
